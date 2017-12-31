@@ -1,0 +1,19 @@
+i What are names of functions for obtaining and givinp up a spinlock?
+Ans.
+Obtaining - acquire
+Giving Up - release
+
+
+ii What is the role of the holding() function?
+Ans.
+It checks if the same CPU which is trying to aquire the lock is already holding the lock i.e. it returns true if the lock is locked and was locked by the current CPU and false when the lock is not locked by this CPU or is not locked at all.
+
+iii Add code to trigger panic via the holding function?
+Ans.
+Add `acquire(&ptable.lock);` in the `proc.c` file just before or after line 40(`acquire(&ptable.lock);`). Basically same CPU trying to aquire the same lock without releasing it first will cause panic.
+
+iv If a sti() call is added just after acquire and a cli() just before release(), what is the effect?
+Ans.
+sti() enables interrupts so if there is an interrupt which also uses the same lock which was just locked using acquire it will lead to a kernel panic.
+
+If the same thing happends during boot time, xv6 goes into an infinite loop.

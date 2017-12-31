@@ -1,0 +1,48 @@
+Disk name : disk.img 
+Creating disk. 
+New disk created
+Superblock initialised
+Metadata initialised
+File system created.
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+
+File Opened
+File Opened
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 4 -1 -1] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 4 5 -1] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+Truncating 1 block from file2. current offset: 512
+0 blocks truncated from file2, offset: 512
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 4 5 -1] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+Writing 512 bytes to file1, offset: 1536.
+After writing, file1 offset : 2048
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 4 5 6] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+Truncating all blocks from file1. current offset: 2048
+0 blocks truncated from file1, offset: 2048
+
+Truncating all blocks from file2. current offset: 512
+0 blocks truncated from file2, offset: 512
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 4 5 6] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+Device Closed 

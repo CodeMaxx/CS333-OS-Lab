@@ -1,0 +1,55 @@
+Disk name : disk.img 
+Creating disk. 
+New disk created
+Superblock initialised
+Metadata initialised
+File system created.
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+
+File Opened
+File Opened
+Writing 50 bytes to file1, offset: 0.
+After writing, file1 offset : 50
+
+Writing 1710 bytes to file2, offset: 0.
+After writing, file2 offset : 1710
+
+Writing 1710 bytes to file1, offset: 50.
+After writing, file1 offset : 1760
+
+Writing 700 bytes to file2, offset: 1710.
+ERROR: Maximum File Size Exceeded
+After writing, file2 offset : 1710
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	1760 	[2 7 8 9] 	Sun Oct 29 14:44:38 2017
+file2 	1710 	[3 4 5 6] 	Sun Oct 29 14:44:38 2017
+
+Device Closed
+
+...................Reopening device................ 
+Disk exists. 
+File system on the disk : emufs 
+Here 
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	1760 	[2 7 8 9] 	Sun Oct 29 14:44:38 2017
+file2 	1710 	[3 4 5 6] 	Sun Oct 29 14:44:38 2017
+
+File Opened
+File Opened
+Reading 50 bytes from file1, offset: 0.
+Data = [START-This is a small text consisting 50 bytes-END] 
+After reading, file1 offset : 50
+
+Reading 1710 bytes from file1, offset: 50.
+Data = [START---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes----This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes---This is a very large text consisting 1710 bytes-This is a very large text consisting 1710 bytes---END] 
+After reading, file1 offset : 1760
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	1760 	[2 7 8 9] 	Sun Oct 29 14:44:38 2017
+file2 	1710 	[3 4 5 6] 	Sun Oct 29 14:44:38 2017
+
+Reached A
+Device Closed

@@ -1,0 +1,82 @@
+To generate the outputs, I used redirect
+
+For example,
+`make qemu > my_before_output`
+
+Then typed commands in the QEMU window that opened and the outputs got redirected to the file.
+I removed the first 8 lines from the file which show the process sh starting along with other setup.
+
+------------------------------------------------------------------------------------------------------
+
+Before outputs
+
+```lazyvm1.c```
+
+Initially 5 pages get allocated and mapped as we see.
+
+We sbrk(EXTRA_SPACE) of 8KB which is 2 more pages. Since there is no lazy loading these 2 pages get allocated and mapped.
+We can see this as physical pages = 7 and the size is also 7 pages
+
+20484, 28658 are inside the 7 allocated pages. Hence the value 0 is printed and we don't get a page fault
+
+28676 on the other hand lies outside the 7 pages hence we fall in a trap due to the page fault
+
+```lazyvm2.c```
+
+We try to access 28668 in this case, this is actually greater than the size of the process but since memory is allocated in units of pages, this lies inside the 7 pages. Hence we do not get a page fault even though this is outside the process size.
+
+Everything else remains same.
+
+```lazyvm3.c```
+
+Here we get a page fault on 28670; This is because being an integer pointer we tried to access 4 bytes from 28670 to 28673.
+
+28673 goes outside the 7 pages(28672) allocated to the process. Thus we get a page fault.
+
+Rest remains same as lazyvm2.c
+
+
+------------------------------------------------------------------------------------------------------
+
+After outputs
+
+```lazyvm1.c```
+
+Initially 5 pages get allocated and mapped as we see.
+
+We sbrk(EXTRA_SPACE) of 8KB which is 2 more pages. Since there is lazy loading the size of the process increases but the number of physical page mappings remain 5 as seen in the output.
+
+20484 is in the "to-be" 6th page. There is a page fault which is handled and that page gets allocated. So now we have 6 physical pages for the process.
+
+28658 is in the "tp-be" 7th page. There is a page fault which gets handled and that page gets allocated. So now we have 7 physical pages.
+
+28676 lies outside the 7 pages hence we fall in a trap due to the page fault. There is no page allocation this time since this lies outside the process size.
+
+
+```lazyvm2.c```
+
+We try to access 28668 in this case instead of 28658; this is actually greater than the size of the process. Since there is lazy allocation and nothing in the 7th page(and within the process size) has been access, a 7th physical page has not been generated. This causes a page fault and the program dies.
+
+Everything else remains same.
+
+```lazyvm3.c```
+
+Here we access both 28658 and 28668. Since we accesses 28658 which is within the process size, a 7th physical page had gotten allocated. So although 28668 is outside the process size, it is within the 7 physical pages. Hence no page fault death.
+
+Here we get a page fault on 28670; This is because being an integer pointer we tried to access 4 bytes from 28670 to 28673.
+
+28673 goes outside the 7 pages(28672) allocated to the process. Thus we get a page fault.
+
+Rest remains same as lazyvm2.c
+
+------------------------------------------------------------------------------------------------------------------
+
+Some implementation details:
+
+In the allocation in growproc() ( called by sbrk() ), I'm just increasing the size of the process without giving it any physical pages.
+
+In trap.c to handle the page_fault which is due to lazy allocation, I allocate a page using kalloc and give it to the process. The mapping in the page directory is done using mappages. The faulting instruction gets executed again and this time the mapping is available so no page fault and the program is able to proceed.
+
+For getNumPages, get_va_to_pa is used to find the number of valid mappings i.e. the number of physical pages actually allocated.
+
+get_va_to_pa uses walkpgdir to get the physical address, if available.

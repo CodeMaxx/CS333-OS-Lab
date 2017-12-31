@@ -1,0 +1,19 @@
+1. Explain the code in each of the lines 3078 and 3079.
+3078 r->next = kmem.freelist;
+3079 kmem.freelist = r;
+
+Ans. The free page is put at the head of the free pages list and the root pointer is changed to point to this new head.
+
+2. Consider the following sequence of statements executed in walkpgdir function. This is executed if
+the if condition in line 1760 is true. Explain what each line in this code is trying to do and how
+it achieves it.
+1759 pde = &pgdir[PDX(va)];
+1761 pgtab = (pte_t*)p2v(PTE_ADDR(*pde));
+1772 return &pgtab[PTX(va)];
+
+Ans. 1759 is getting a pointer pde to the physical address of the page-table entry in the pgdir. PDX is the first 10 bits giving the offset in the pgdir.
+
+1760 checks if the page is already allocated i.e. the address in pde is a valid page table address(Uses present bit).
+
+If the page table is present, we store the virtual address of the page-table in pgtab. Then we return a pointer to the physical address of the actual page we want to access using the offset through PTX(va).
+

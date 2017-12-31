@@ -1,0 +1,33 @@
+$ lazyvm1
+sz: 20480, vp: 5, pp: 5
+addr: 11004, value: 1234
+sz: 28662, vp: 7, pp: 7
+addr: 20484, value: 0
+sz: 28662, vp: 7, pp: 7
+addr: 28658, value: 0
+sz: 28662, vp: 7, pp: 7
+addr: 28676
+pid 3 lazyvm1: trap 14 err 4 on cpu 0 eip 0x106 addr 0x7004--kill proc
+$ lazyvm2
+sz: 20480, vp: 5, pp: 5
+addr: 11036, value: 1234
+sz: 28662, vp: 7, pp: 7
+addr: 20484, value: 0
+sz: 28662, vp: 7, pp: 7
+addr: 28668
+value: 0
+sz: 28662, vp: 7, pp: 7
+addr: 28676
+pid 4 lazyvm2: trap 14 err 4 on cpu 0 eip 0x115 addr 0x7004--kill proc
+$ lazyvm3
+sz: 20480, vp: 5, pp: 5
+addr: 11036, value: 1234
+sz: 28662, vp: 7, pp: 7
+addr: 20484, value: 0
+sz: 28662, vp: 7, pp: 7
+addr: 28658, value: 0
+sz: 28662, vp: 7, pp: 7
+addr: 28668, value: 0
+addr: 28670
+pid 5 lazyvm3: trap 14 err 4 on cpu 0 eip 0x120 addr 0x7000--kill proc
+$ 

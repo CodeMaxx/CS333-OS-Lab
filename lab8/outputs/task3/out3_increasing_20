@@ -1,0 +1,68 @@
+$ testcase 20
+Priority of parent process = 1000
+Exiting. pid=20, prio=17, AT=421, IWT=134, FST=555, ET=2885, RT=2331, TWT=134.
+Exiting. pid=23, prio=20, AT=422, IWT=187, FST=609, ET=2888, RT=2280, TWT=187.
+Exiting. pid=21, prio=18, AT=421, IWT=151, FST=572, ET=2922, RT=2351, TWT=151.
+Exiting. pid=22, prio=19, AT=422, IWT=168, FST=590, ET=2924, RT=2335, TWT=168.
+Exiting. pid=17, prio=14, AT=420, IWT=90, FST=510, ET=2937, RT=2428, TWT=90.
+Exiting. pid=19, prio=16, AT=421, IWT=118, FST=539, ET=2969, RT=2431, TWT=118.
+Exiting. pid=14, prio=11, AT=419, IWT=55, FST=474, ET=2979, RT=2506, TWT=55.
+Exiting. pid=18, prio=15, AT=420, IWT=104, FST=524, ET=2997, RT=2474, TWT=104.
+Exiting. pid=10, prio=7, AT=418, IWT=22, FST=440, ET=3003, RT=2564, TWT=22.
+Exiting. pid=16, prio=13, AT=420, IWT=77, FST=497, ET=3008, RT=2512, TWT=77.
+Exiting. pid=15, prio=12, AT=419, IWT=66, FST=485, ET=3030, RT=2546, TWT=66.
+Exiting. pid=13, prio=10, AT=418, IWT=46, FST=464, ET=3048, RT=2585, TWT=46.
+Exiting. pid=11, prio=8, AT=418, IWT=29, FST=447, ET=3063, RT=2617, TWT=29.
+Exiting. pid=12, prio=9, AT=418, IWT=37, FST=455, ET=3074, RT=2620, TWT=37.
+Exiting. pid=7, prio=4, AT=417, IWT=8, FST=425, ET=3089, RT=2665, TWT=8.
+Exiting. pid=9, prio=6, AT=417, IWT=17, FST=434, ET=3097, RT=2664, TWT=17.
+Exiting. pid=8, prio=5, AT=417, IWT=12, FST=429, ET=3115, RT=2687, TWT=12.
+Exiting. pid=6, prio=3, AT=410, IWT=4, FST=414, ET=3123, RT=2710, TWT=4.
+Exiting. pid=4, prio=1, AT=410, IWT=1, FST=411, ET=3125, RT=2715, TWT=1.
+Exiting. pid=5, prio=2, AT=410, IWT=2, FST=412, ET=3135, RT=2724, TWT=2.
+
+All children completed
+Child 0.    pid 4
+Child 1.    pid 5
+Child 2.    pid 6
+Child 3.    pid 7
+Child 4.    pid 8
+Child 5.    pid 9
+Child 6.    pid 10
+Child 7.    pid 11
+Child 8.    pid 12
+Child 9.    pid 13
+Child 10.    pid 14
+Child 11.    pid 15
+Child 12.    pid 16
+Child 13.    pid 17
+Child 14.    pid 18
+Child 15.    pid 19
+Child 16.    pid 20
+Child 17.    pid 21
+Child 18.    pid 22
+Child 19.    pid 23
+
+Exit order 
+pid 20
+pid 23
+pid 21
+pid 22
+pid 17
+pid 19
+pid 14
+pid 18
+pid 10
+pid 16
+pid 15
+pid 13
+pid 11
+pid 12
+pid 7
+pid 9
+pid 8
+pid 6
+pid 4
+pid 5
+Exiting. pid=3, prio=1000, AT=408, IWT=0, FST=408, ET=3140, RT=2733, TWT=0.
+$ 

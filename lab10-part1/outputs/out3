@@ -1,0 +1,32 @@
+Disk name : disk.img 
+Creating disk. 
+New disk created
+Superblock initialised
+Metadata initialised
+File system created.
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+
+File Opened
+File Opened
+Writing 512 bytes to file1, write-offset: 0.
+After writing,  write-offset : 512
+
+Writing 1024 bytes to file1, write-offset: 512.
+After writing,  write-offset : 1536
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 3 4 -1] 	Fri Oct 27 17:18:45 2017
+
+Reading 512 bytes from file1, read-offset: 0.
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+After reading, read-offset: 512
+
+Reading 1024 bytes from file1, read-offset: 512.
+Data = [This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---Reached the end of 1024 bytes--END] 
+After reading, read-offset: 1536
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 3 4 -1] 	Fri Oct 27 17:18:45 2017
+
+Device Closed 

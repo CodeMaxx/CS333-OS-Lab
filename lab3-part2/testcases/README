@@ -1,0 +1,122 @@
+=================================================================================
+									README
+=================================================================================
+
+There is a lab3.pdf which contains the problem statement.
+
+There are two parts in this lab. Check the deadlines of the two parts.
+
+Also we have provided the sample mosh binary to understand the working of the shell.
+
+Here are some sample testcases which you should try on your shell. 
+Try running these on the provided binary first to understand what is happening.
+
+In addition to these you should try your own testcases and submit them.
+
+Part 1:
+=======
+
+Some commands with sample output.
+
+mosh>mkdir test
+mosh>ls
+make-tokens.c  mosh  mosh.c README test
+mosh>cd test
+mosh>pwd
+/home/vinay/Documents/OS/lab3/test
+mosh>cd ..
+mosh>pwd
+/home/vinay/Documents/OS/lab3
+mosh>cd
+Wrong number of arguments
+mosh>rm test
+rm: cannot remove 'test': Is a directory
+Error
+mosh>rmdir test
+mosh>ls
+make-tokens.c  mosh  mosh.c README
+mosh>sleep 5
+mosh>echo "Hello"
+"Hello"
+mosh>echo "Hello" > hello.txt
+mosh>ls
+hello.txt make-tokens.c  mosh  mosh.c README
+mosh>cat hello.txt
+"Hello"
+mosh>cd hello.txt
+Some error
+mosh>cat hi.text 
+cat: hi.text: No such file or directory
+Error
+mosh>sleep 5 ;; cat hello.txt ;; sleep 1 ;; echo "hi" ;; ls
+"Hello"
+"hi"
+hello.txt make-tokens.c  mosh  mosh.c README
+mosh>cat hi.txt ;; echo "You know nothing Jon Snow"
+cat: hi.txt: No such file or directory
+Error
+"You know nothing Jon Snow"
+mosh>
+
+Some more commands that you should try:
+cd .
+cd ..
+cd xyz (directory which doesn't exist)
+cat abc.txt
+sleep 10 
+echo "Hello World" > abc.txt
+cp abc.txt def.txt
+cat abc.txt > xyz.txt
+sleep 1 ;; echo "Hello" ;; sleep 2 ;; cat abc.txt ;; sleep 3 ;; ls -l
+
+
+Part 2:
+======
+
+In this part you should check if there are any zombie processes left after shell exits.
+A sample run:
+
+mosh>sleep 3 && echo "hi" && ls
+mosh>"hi"
+Background process completed
+hello.txt  make-tokens.c  README  sample_mosh	sample_mosh.c
+Background process completed
+Background process completed
+
+Run mosh>sleep 3
+Then do Ctrl+C. Only the process should terminate and shell should show prompt.
+
+Run mosh>sleep 3 && echo "hi" && ls
+Then do Ctrl+C immediately. All the above should still be executed as these are background processes.
+
+Run mosh>sleep 3 ;; echo "hi" ;; ls
+Then do Ctrl+C immediately. If Ctrl+C was presses when sleep is executing, the remaining processes should still work.
+
+Run mosh>exit
+There should be no zombie or orphan processes once shell exits. Check using top and ps.
+
+
+
+Own testcases:
+--------------
+
+moshmaxx>echo "codemaxx"
+"codemaxx"
+moshmaxx>ps
+   PID TTY          TIME CMD
+111441 pts/0    00:00:00 bash
+111670 pts/0    00:00:00 a.out
+111671 pts/0    00:00:05 a.out
+111673 pts/0    00:00:00 ps
+moshmaxx>cpuinfo
+Could not find command: cpuinfo
+moshmaxx>ls && sleep 3 && cpuinfo
+moshmaxx>Could not find command: cpuinfo
+Background process completed
+150050031_lab3  150050031_lab3.tar.gz  abc.txt  a.out  a.out.dSYM  def.txt  hello.txt  make-tokens.c  mosh.c  README  sample_mosh  xyz.txt
+Background process completed
+^CBackground process completed
+
+moshmaxx>ls ;; sleep 3 ;; cpuinfo
+150050031_lab3  150050031_lab3.tar.gz  abc.txt  a.out  a.out.dSYM  def.txt  hello.txt  make-tokens.c  mosh.c  README  sample_mosh  xyz.txt
+^Cmoshmaxx>

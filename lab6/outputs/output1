@@ -1,0 +1,5 @@
+$ counter_with_lock
+20000$ counter_without_lock 
+12826$ counter_with_lock
+20000$ counter_without_lock
+11754$ 

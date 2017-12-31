@@ -1,0 +1,14 @@
+moshmaxx>ls | grep lab
+labquiz1.pdf
+
+moshmaxx>readme | grep lab
+Command not found
+
+moshmaxx>cat readme | grep lab
+5. labquiz1.pdf describes the quiz
+
+moshmaxx>cat readme | grep b
+Labquiz #1. CS333. Autumn 2017
+1. 'forktree' and 'pipe' are binaries for questions 1 and 2, respectively.
+5. labquiz1.pdf describes the quiz
+   submit via moodle.

@@ -1,0 +1,39 @@
+Disk name : disk.img 
+Creating disk. 
+New disk created
+Superblock initialised
+Metadata initialised
+File system created.
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+
+File Opened
+File Opened
+Writing 50 bytes to file1, offset: 0.
+After writing, file1 offset : 50
+
+Writing 700 bytes to file2, offset: 0.
+After writing, file2 offset : 700
+
+Writing 50 bytes to file1, offset: 50.
+After writing, file1 offset : 100
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	100 	[2 -1 -1 -1] 	Sun Oct 29 14:44:38 2017
+file2 	700 	[3 4 -1 -1] 	Sun Oct 29 14:44:38 2017
+
+Writing 1710 bytes to file1, offset: 100.
+ERROR: Out of diskspace
+After writing, file1 offset : 100
+
+Truncating all blocks from file2. current offset: 700
+2 blocks truncated from file2, offset: 0
+
+Writing 1710 bytes to file1, offset: 100.
+After writing, file1 offset : 1810
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	1810 	[2 3 4 5] 	Sun Oct 29 14:44:38 2017
+file2 	0 	[-1 -1 -1 -1] 	Sun Oct 29 14:44:38 2017
+
+Device Closed 

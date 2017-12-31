@@ -1,0 +1,55 @@
+Disk name : disk.img 
+Creating disk. 
+New disk created
+Superblock initialised
+Metadata initialised
+File system created.
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+
+File Opened
+File Opened
+Writing 512 bytes to file1, offset: 0.
+After writing, file1 offset : 512
+
+Writing 1536 bytes to file2, offset: 0.
+After writing, file2 offset : 1536
+
+Writing 1536 bytes to file1, offset: 512.
+After writing, file1 offset : 2048
+
+Writing 1024 bytes to file2, offset: 1536.
+ERROR: Maximum File Size Exceeded
+After writing, file2 offset : 1536
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 6 7 8] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 4 5 -1] 	Fri Oct 27 17:18:45 2017
+
+Device Closed
+
+...................Reopening device................ 
+Disk exists. 
+File system on the disk : emufs 
+Here 
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 6 7 8] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 4 5 -1] 	Fri Oct 27 17:18:45 2017
+
+File Opened
+File Opened
+Reading 512 bytes from file1, offset: 0.
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+After reading, file1 offset : 512
+
+Reading 1536 bytes from file1, offset: 512.
+Data = [This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes-----Reached the end-----END] 
+After reading, file1 offset : 2048
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 6 7 8] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 4 5 -1] 	Fri Oct 27 17:18:45 2017
+
+Reached A
+Device Closed

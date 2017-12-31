@@ -1,0 +1,47 @@
+Disk name : disk.img 
+Creating disk. 
+New disk created
+Superblock initialised
+Metadata initialised
+File system created.
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+
+File Opened
+File Opened
+Writing 512 bytes to file1, offset: 0.
+After writing, file1 offset : 512
+
+file1 offset is set to 0
+
+Reading 512 bytes from file1, offset: 0.
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+After reading, file1 offset : 512
+
+Writing 1024 bytes to file2, offset: 0.
+After writing, file2 offset : 1024
+
+file2 offset is set to 0
+
+Reading 1024 bytes from file2, offset: 0.
+Data = [This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---Reached the end of 1024 bytes--END] 
+After reading, file1 offset : 1024
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 -1 -1 -1] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 4 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+Writing 1536 bytes to file1, offset: 512.
+After writing, file1 offset : 2048
+
+file1 offset is set to 512
+
+Reading 1536 bytes from file1, offset: 512.
+Data = [This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes-----Reached the end-----END] 
+After reading, file1 offset : 2048
+
+NAME 	SIZE 	[BLOCKS] 	LAST MODIFIED
+file1 	0 	[2 5 6 7] 	Fri Oct 27 17:18:45 2017
+file2 	0 	[3 4 -1 -1] 	Fri Oct 27 17:18:45 2017
+
+Device Closed 

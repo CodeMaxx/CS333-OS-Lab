@@ -1,0 +1,7 @@
+1) ./producer-consumer 2 4 1 1 10 5
+
+2) ./producer-consumer 3 2 4 1 5 10 
+
+3) ./producer-consumer 5 5 1 1 10 10
+
+4) ./producer-consumer 10 6 4 1 6 10
